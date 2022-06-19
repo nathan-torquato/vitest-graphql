@@ -1,16 +1,13 @@
-import { ApolloServer } from "apollo-server-express"
 import express from "express"
 import { DocumentNode, print } from "graphql"
 import http from "http"
 import request from "supertest"
+import { server } from '../src'
 
 let cachedServer: any;
 
 const createServer = async () => {
   const app = express();
-  const server = new ApolloServer({
-    resolvers: {}
-  });
   const httpServer = http.createServer(app);
   await server.start();
   server.applyMiddleware({ app });
