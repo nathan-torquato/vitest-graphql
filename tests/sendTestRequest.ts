@@ -1,8 +1,8 @@
-import { ApolloServer } from "apollo-server-express";
-import * as express from "express";
-import { DocumentNode, print } from "graphql";
-import * as http from "http";
-import * as request from "supertest";
+import { ApolloServer } from "apollo-server-express"
+import express from "express"
+import { DocumentNode, print } from "graphql"
+import http from "http"
+import request from "supertest"
 
 let cachedServer: any;
 
